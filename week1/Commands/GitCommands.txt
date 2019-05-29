@@ -1,0 +1,9 @@
+paste in gitbash:  	 	Shift + ins (fn+ins)
+clone:                   	git clone fileLocation
+commit with a message: 	 	git commit -m "words"
+			 	git push
+				git pull
+				git add .
+				git status
+creates a file			touch
+				

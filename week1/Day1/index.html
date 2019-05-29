@@ -1,0 +1,116 @@
+<!-- HTML syntax for comments-->
+<!-- "CTR" + "/" to toggle comment -->
+
+<!DOCTYPE html>
+<!-- The root tag of any html document VV -->
+<html>
+    <!-- tags:
+    tags are how we define elemetns in our HTML 
+    <element attribute="value"></element>
+    -->
+    <head>
+        <!-- inside the head goes meta data -->
+        <!-- first (by convention) we put things about the html document in meta tags -->
+        <meta charset="utf-8" />
+        <!-- self closing  -->
+        <!-- it has an attribute -->
+        <!-- attribute describe/change things about elements
+             In this case, this document is using the character set UTF-8 (Unicode) -->
+        
+        <!-- Provide the name of our tab/window -->
+        <title>Our Page! Lul</title>
+        
+        <!-- We can add other meta information:
+                application-name,
+                author,
+                description,
+                keywords (used to be used for Search Engine Optimization) -->
+
+    </head>
+    <body>
+        <!-- inside the body goes the actual content -->
+
+        <!-- WhiteSpace in HTML doesn't matter -->
+        Hello,      Revature!
+        <!-- lets start using elements in the body -->
+        <!-- the 'p' tag represents a paragraph -->
+        <p>Hello from inside the 'p' tag</p>
+
+        <!-- There are 6 header tags: -->
+        <h1>From big</h1>
+        <h6>to small</h6>
+
+        <img src="images\soulEater.jpg" width="950" height="540"/>
+        
+        <!-- a used for hyperlinks -->
+        <a href="https://google.com">link to google</a>
+
+        <!-- there are many types of lists and other structured content in HTML: -->
+        <!-- Ordered Lists (Numbered) -->
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ol>
+
+        <!-- Unordered Lists (not numbered) -->
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+
+        <!-- tables -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>Body Row 1 Cell 1</td>
+                        <td>Body Row 1 Cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>Body Row 2 Cell 1</td>
+                        <td>Body Row 2 Cell 2</td>
+                    </tr>
+            </tbody>
+        </table>
+
+        <!-- line breaks -->
+        Line
+        <br>
+        <br>
+        Break
+
+        <!-- We have some ways of marking text/content
+            as important: -->
+            <p>
+                this is <em>emphasized</em>,<br>
+                this is <strong>strong</strong>,<br>
+                this is <u>underlined</u><br>
+            </p>
+
+            <blockquote>
+                Indented (by default) quotation
+            </blockquote>
+
+            <!-- We have block elements that own their own vertical space:
+            p, ol, table, ... -->
+            <!-- We have inline elements that don't:
+            strong, em, a, ... -->
+            
+            <!-- There are 2 generic elements -->
+            <div>
+                div is a block generic element
+            </div>
+
+            <span>inline generic element</span>
+
+    </body>
+</html>
