@@ -1,0 +1,50 @@
+/*Comment*/
+
+
+/* Select all p elements */
+p{
+    color: limegreen;
+}
+
+.item {
+    text-decoration: underline;
+}
+#unique_div{
+    font-weight: 400;
+    background-color: aquamarine;
+}
+.second-class{
+    border: 2px dashed black;
+    padding: 20px;
+    margin: 20px;
+}
+li.item {
+    /* We can manually specify the different sides of padding or margin */
+    border: 2px dotted black;
+    padding: 60px 40px 20px 0px;
+    /* The above is the same as: */
+    /*padding-top: 60px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 0px;*/
+}
+
+/* conflicting rules are resolved according to specificity:
+    1. inline style
+    2. id
+    3. class
+    4. element 
+    also combinations are more specific than single selectors*/
+
+/* classless list item */
+li {
+border: 5px dotted black;
+}
+
+/* ancestor */
+ul li{
+    background-color: hotpink;
+}
+div p{
+    background-color: hotpink;
+}

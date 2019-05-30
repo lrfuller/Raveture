@@ -1,0 +1,22 @@
+main{
+    background-color: bisque;
+    border: 4px solid brown;
+    margin-right: 800px;
+    padding: 10px;
+}
+
+.picture{
+    border: 6px solid orange;
+    width: 70%;
+    height: 200px;
+    margin-bottom:20px;
+}
+
+#text{
+    border: 6px dashed orange;
+    background-color: yellow;
+    overflow-y: scroll;
+    width: 70%;
+    height: 100px;
+}
+

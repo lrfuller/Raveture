@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- for mobile display: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- for IE compatibility: -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <title>CSS</title>
+</head>
+<body>
+    <ul>
+        <!-- There are two attributes we use to apply styling class and id. 
+            Class is not unique, and an element can have more than one class, separated by a space. 
+            id is unique in the document, and an element can have only 1-->
+        <li class="item"> classy item</li>
+        <li class="item"> classy item</li>
+        <li>classless item</li>
+    </ul>
+
+    <!-- we can apply classes to different types of elements -->
+    <p class="item">
+        text inside p tag with class item.
+    </p>
+
+    <div id="unique_div">
+        <p>We can select this div by id.</p>
+    </div>
+
+    <p class="item second-class">This p tag has 2 classes</p>
+
+
+</body>
+</html>

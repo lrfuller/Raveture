@@ -112,5 +112,79 @@
 
             <span>inline generic element</span>
 
+            <!-- select creates a drop-down -->
+            <select>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+            <br>
+
+            <!-- HTLM5 elements -->
+            <!-- "flash-replacement" elements -->
+            <video controls></video><br>
+            <!-- the video element provides native support
+            for video in HTLM5. It lets browsers use appropriate video codecs. You
+            can specify more then 1 source file -->
+            <audio controls></audio><br>
+            <!-- the audio element is similar to the video element, but with audio!
+            Specify src -->
+            <canvas></canvas>
+            <!-- canvas lets you make interactive and/or animated graphics -->
+
+            <!-- HTML5 also added semantic tags -->
+            <!-- before HTLM5 common practice had lots of tags like
+                <div class="section"> or <div class="footer"> -->
+            
+            <section>section</section>
+            <header>header</header>
+            <main>main</main>
+            <nav>nav</nav>
+            <aside>aside</aside>
+
+            <!-- These are very good to use in practical web development.
+            They make the meaning of your tags more clear. -->
+
+
+            <!-- One more big piece of html to know: -->
+            <!-- forms! -->
+            <!-- forms let you make basic HTTP requests. You can GET and POST.
+            GET request goes to a url and has no body. Form parameters are attached
+            to the end of the url in a query string. -->
+            <form method="GET" action="https://google.com/search">
+                <!-- input elements provide a key-value pair that is submitted with the form. Key
+                comes from the name attribute. Value is the input. -->
+                <input type="color" name="color">
+
+                <input type="text" name="q"> <!--q stands for query-->
+
+                <!-- special case: no k-v -->
+                <input type="submit">
+            </form>
+
+            <!-- we can also send post request with forms. These don't have a query string. Instead they have
+                key value pairs in the request body. -->
+            <form method="POST">
+                <!-- some input examples -->
+                <input type="number" name="num">
+                <input type="checkbox" name="check">
+
+                <label>Upload file:
+                    <input type="file" name="file">
+                </label>
+                <label for="user">Username: </label>
+                <input type="text" name="user">
+                <label for="pass">Password: </label>
+                <input for="password" type="password" name="pass">
+
+                <input type="radio" name="which" value="1">1
+                <input type="radio" name="which" value="2">2
+                <input type="radio" name="which" value="3">3
+
+                One more thing:
+                <input type="text" placeholder="placeholder_text" required minlength="4" maxlength="10">
+            </form>
+
+
     </body>
 </html>
