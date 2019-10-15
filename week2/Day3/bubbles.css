@@ -1,0 +1,18 @@
+#outer {
+    border : 3px solid black;
+    padding: 5px;
+    text-align: center;
+    background-color: dodgerblue;
+}
+#inner {
+    border : 3px solid black;
+    padding: 5px;
+    text-align: center;
+    background-color: slategray;
+}
+#innermost {
+    border : 3px solid black;
+    padding: 5px;
+    text-align: center;
+    background-color: salmon;
+}

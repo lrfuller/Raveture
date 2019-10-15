@@ -1,0 +1,91 @@
+---	Id (int on DB and java, will be the primary key)
+---	Full name (varchar on DB, String in java)
+---	Username (varchar on DB, String in java)
+---	Password (varchar on DB, String in java)
+---	Role (varchar on DB, String in java)
+
+COMMIT;
+create table ERS(
+    id number not null,
+    full_name varchar(100),
+    username varchar(50),
+    password varchar(50),
+    role varchar(50),
+    primary key (id));
+--    (id) references reimbursments(id));
+--    references reimbursments(id));
+
+
+--drop table ERS;
+
+insert into ERS values(1, 'Bob Tucker', 'emp1','pass', 'employee');
+insert into ERS values(2, 'Neive Holcomb', 'emp2','pass', 'employee');
+insert into ERS values(3, 'Karter Clemons', 'emp3','pass', 'employee');
+insert into ERS values(4, 'Bernard Chadwick', 'man1','pass', 'manager');
+insert into ERS values(5, 'Chanice Goldsmith', 'man2','pass', 'manager');
+insert into ERS values(6, 'Malaika Coles', 'man3','pass', 'manager');
+
+
+select * from ers where role = 'employee';
+
+select * from ers;
+select * from reimbursments;
+
+select id from ers where username = 'emp1' AND password = 'pass';
+
+SELECT * FROM ERS WHERE username = 'emp1' AND password = 'pass';
+SELECT * FROM reimbursments WHERE id= 1;
+SELECT * FROM reimbursments WHERE id= 1 AND NOT status = 'Pending';
+SELECT * FROM reimbursments WHERE id= 1 AND status = 'Pending';
+
+
+SELECT * FROM reimbursments WHERE status  = 'Pending';
+select * from reimbursments where id = 1;
+
+--select full_name from ers;
+--update ers set username = 'emp1' where id = 1;
+select * from ers;
+select * from reimbursments;
+
+insert into reimbursments values(1, TO_DATE('2019-04-07','YYYY-MM-DD'), 13, 100.00, 'Pending');
+
+
+
+-- Id (int java, number SQL)   (foreign key)
+-- date_created (string java, date SQL)
+-- reference_number (int java, number SQL)  (also primary key)
+-- amount_requested (float in both)
+-- status (string java, varchar SQL)
+-- approved (String java, varchar SQL)
+
+create table reimbursments(
+    id number not null,
+    date_created date,
+    reference_number number primary key,
+    amount_requested float,
+    status varchar(20),
+    foreign key (id) references ERS(id)
+);
+
+
+update reimbursments set status = 'Denied' where reference_number = 1;
+
+insert into reimbursments values(1, TO_DATE('2019-04-07','YYYY-MM-DD'), 1, 100.00, 'Denied');
+insert into reimbursments values(1, TO_DATE('2019-04-07','YYYY-MM-DD'), 2, 50.00, 'Approved');
+insert into reimbursments values(1, TO_DATE('2019-04-07','YYYY-MM-DD'), 3, 20.00, 'Pending');
+insert into reimbursments values(1, TO_DATE('2019-04-07','YYYY-MM-DD'), 4, 50.00, 'Pending');
+
+insert into reimbursments values(2, TO_DATE('2019-04-07','YYYY-MM-DD'), 5, 70.00, 'Denied');
+insert into reimbursments values(2, TO_DATE('2019-04-07','YYYY-MM-DD'), 6, 10.00, 'Approved');
+insert into reimbursments values(2, TO_DATE('2019-04-07','YYYY-MM-DD'), 7, 10.00, 'Pending');
+insert into reimbursments values(2, TO_DATE('2019-04-07','YYYY-MM-DD'), 8, 5.00, 'Pending');
+
+insert into reimbursments values(3, TO_DATE('2019-04-07','YYYY-MM-DD'), 9, 100.00, 'Denied');
+insert into reimbursments values(3, TO_DATE('2019-04-07','YYYY-MM-DD'), 10, 150.00, 'Approved');
+insert into reimbursments values(3, TO_DATE('2019-04-07','YYYY-MM-DD'), 11, 9.00, 'Pending');
+insert into reimbursments values(3, TO_DATE('2019-04-07','YYYY-MM-DD'), 12, 10.00, 'Pending');
+
+
+
+
+drop table reimbursments;

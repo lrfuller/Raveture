@@ -1,0 +1,28 @@
+.btn{
+    /* we could style this */
+}
+.jumbotron{
+    background-color:limegreen;
+}
+
+/* Pseudo-elements */
+td::after{
+    /* content : ";)"; */
+}
+td::selection{
+    /* background-color: green; */
+}
+
+/* Pseudo-classes: modifies based on state */
+
+td:hover{
+    text-decoration: underline;
+    border: 3px dashed lightcoral;
+}
+
+:required{
+    border-left: 5px solid red;
+}
+input:valid{
+    border-left: 5px solid green;
+}
